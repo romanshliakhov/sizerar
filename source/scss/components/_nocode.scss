@@ -1,0 +1,14 @@
+.nocode:disabled {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-grey-disable);
+  border: 1px solid var(--color-grey-stroke);
+  border-radius: 8px;
+  font-family: var(--font-family-inter);
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--color-grey);
+}
