@@ -1,0 +1,13 @@
+.email {
+  position: relative;
+  font-size: clamp(18px, 1.389vw, 20px);
+  font-weight: 700;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 100%;
+    border-top: 1px solid var(--color-main);
+  }
+  }
