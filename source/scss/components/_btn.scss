@@ -3,6 +3,7 @@
   height: clamp(40px, 3.889vw, 56px);
   padding: 0 35px;
   background-color: var(--color-white);
+  background-color: transparent;
   border: 2px solid var(--color-purple);
   border-radius: clamp(74px, 6.944vw, 100px);
   display: flex;
