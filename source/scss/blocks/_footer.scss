@@ -1,9 +1,13 @@
 .footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 23px 0;
   background-color: transparent;
+  z-index: 5;
 
   @media (max-width: 576px) {
+    position: relative;
     padding: 28px 0;
   }
 
