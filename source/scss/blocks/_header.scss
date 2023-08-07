@@ -1,8 +1,9 @@
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
   padding: clamp(10px, 1.389vw, 20px) 0;
   background-color: transparent;
-  // background-color: var(--color-white);
+  z-index: 5;
 
   &__wrapp {
     display: flex;
@@ -28,6 +29,10 @@
     display: flex;
     align-items: center;
     grid-gap: clamp(12px, 1.111vw, 16px);
+
+    .btn:first-child {
+      padding: 0 clamp(25px, 2.431vw, 35px);
+    }
   }
 }
 

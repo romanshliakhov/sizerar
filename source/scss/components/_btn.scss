@@ -1,7 +1,7 @@
 .btn {
   position: relative;
   height: clamp(40px, 3.889vw, 56px);
-  padding: 0 clamp(26px, 2.431vw, 35px);
+  padding: 0 35px;
   background-color: var(--color-white);
   border: 2px solid var(--color-purple);
   border-radius: clamp(74px, 6.944vw, 100px);
@@ -40,6 +40,17 @@
       border: 2px solid transparent;
       background: rgba(106, 87, 231, 0.07);
       color: var(--color-purple);
+    }
+  }
+
+  &--appstore {
+    padding: 0 clamp(24px, 1.875vw, 27px);
+    background-color: var(--color-purple);
+
+    svg {
+      fill: var(--color-white);
+      width: clamp(97px, 7.569vw, 109px);
+      height: clamp(28px, 2.222vw, 32px);
     }
   }
 }
