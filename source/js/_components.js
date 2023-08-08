@@ -17,6 +17,7 @@
 // import './components/mobileMenu.js';
 // import './components/filters.js';
 // import './components/filtersSearch.js';
+import './components/sliders.js';
 import './components/smoothScroll.js';
 import './components/scrollHeader.js';
 import './components/lineAnimation.js';

@@ -43,7 +43,57 @@
       <section class="info">
         <div class="container">
           <div class="info__wrapp">
-            <h2>If the shoe fits...</h2>
+            <div class="info__swiper mySwiper">
+              <div class="info__swiper-wrapper swiper-wrapper">
+                <div class="info__swiper-slide swiper-slide">
+                  <div class="slide">
+                    <div class="slide__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/slides/slide1.webp'>
+                        <img width='467' height='471' src='img/slides/slide1.png' alt='If the shoe fits...'>
+                      </picture>
+                    </div>
+
+                    <div class="slide__info">
+                      <h2 class="slide__title">If the shoe fits...</h2>
+                      <p class="slide__descr">Then wear it confidently. Now you can order shoes online without needing to worry about sending them back.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info__swiper-slide swiper-slide">
+                  <div class="slide">
+                    <div class="slide__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/slides/slide2.webp'>
+                        <img width='467' height='471' src='img/slides/slide2.png' alt='3D scan of your feet in 3 minutes!'>
+                      </picture>
+                    </div>
+
+                    <div class="slide__info">
+                      <h2 class="slide__title">3D scan of your feet in 3 minutes!</h2>
+                      <p class="slide__descr">Perform a scan right now from the comfort of your home using only your phone.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info__swiper-slide swiper-slide">
+                  <div class="slide">
+                    <div class="slide__image">
+                      <picture>
+                        <source type='image/webp' srcset='img/slides/slide3.webp'>
+                        <img width='467' height='471' src='img/slides/slide3.png' alt='All in one place!'>
+                      </picture>
+                    </div>
+
+                    <div class="slide__info">
+                      <h2 class="slide__title">All in one place!</h2>
+                      <p class="slide__descr">Create and save 3D scans of your family and use them at any time!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info__swiper-pagination swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -310,6 +360,7 @@
     @include('partials/modals.html',{})
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 

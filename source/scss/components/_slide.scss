@@ -1,0 +1,28 @@
+.slide {
+  display: flex;
+  align-items: center;
+  grid-gap: 187px;
+
+  &__info {
+    max-width: 512px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+
+  &__descr {
+    font-family: var(--font-family-dmsans);
+  }
+
+  &__image {
+    width: 467px;
+    height: 471px;
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
