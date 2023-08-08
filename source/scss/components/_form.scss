@@ -71,7 +71,11 @@
   }
 
   &__btn {
-    padding: 17px 81px;
+    padding: 0 81px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-green);
     border-radius: 100px;
     font-family: var(--font-family-dmsans);

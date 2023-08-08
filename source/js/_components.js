@@ -19,7 +19,7 @@
 // import './components/filtersSearch.js';
 import './components/smoothScroll.js';
 import './components/scrollHeader.js';
-import './components/heroLineAnimation.js';
+import './components/lineAnimation.js';
 
 
 

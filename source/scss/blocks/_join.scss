@@ -17,6 +17,18 @@
       width: clamp(1200px, 89.792vw, 1724px);
       height: clamp(600px, 46.771vw, 898px);
 
+      .dashed{
+        stroke-dasharray: 8 8;
+      }
+
+      .path {
+        stroke-dasharray: 3600;
+        stroke-dashoffset: 3600;
+        // animation: dash-join 5s linear forwards;
+        animation-delay: 0.5s;
+        stroke: #C5BBDB;
+      }
+
       @media (max-width: 1240px) {
         width: 100%;
         height: clamp(390px, 48.387vw, 600px);
@@ -202,5 +214,15 @@
 
   40% {
     transform: translateY(100px);
+  }
+}
+
+
+@keyframes dash-join {
+  from {
+    stroke-dashoffset: 3600;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

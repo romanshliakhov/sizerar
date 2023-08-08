@@ -1,7 +1,6 @@
 const heroSection = document.querySelector('.hero');
 const footerSection = document.querySelector('.footer');
 const header = document.querySelector('header');
-console.log(heroSection);
 
 const observer = new IntersectionObserver( (entries) => {
   const ent = entries[0];

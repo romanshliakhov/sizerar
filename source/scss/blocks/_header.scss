@@ -41,6 +41,11 @@
     align-items: center;
     grid-gap: clamp(12px, 1.111vw, 16px);
 
+    .btn {
+      height: clamp(40px, 3.889vw, 56px);
+      font-size: clamp(12px, 1.111vw, 16px);
+    }
+
     .btn:first-child {
       padding: 0 clamp(25px, 2.431vw, 35px);
     }
