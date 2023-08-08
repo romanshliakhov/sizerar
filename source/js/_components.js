@@ -1,7 +1,7 @@
 // import './components/sliders.js';
 // import './components/select.js';
 // import './components/burger.js';
-// import './components/smoothScroll.js';
+
 // import './components/spollers.js';
 // import './components/tabs.js';
 // import './components/replaceEl.js';
@@ -17,6 +17,7 @@
 // import './components/mobileMenu.js';
 // import './components/filters.js';
 // import './components/filtersSearch.js';
+import './components/smoothScroll.js';
 import './components/scrollHeader.js';
 import './components/heroLineAnimation.js';
 

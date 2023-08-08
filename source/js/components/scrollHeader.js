@@ -1,19 +1,12 @@
-window.onscroll = function showHeader() {
-  const header = document.querySelector('header');
-  let offsetHeight = 900;
-  let breakpoint = 768;
+const heroSection = document.querySelector('.hero');
+const footerSection = document.querySelector('.footer');
+const header = document.querySelector('header');
+console.log(heroSection);
 
-  if(breakpoint > 768) {
-    if(document.querySelector('.hero-section')) {
-      offsetHeight = document.querySelector('.hero-section').offsetHeight;
-    }
-  } else {
-    offsetHeight = 695;
-  }
+const observer = new IntersectionObserver( (entries) => {
+  const ent = entries[0];
+  ent.isIntersecting === false ? header.classList.add('fixed') :  header.classList.remove('fixed');
+})
 
-  if(window.pageYOffset > offsetHeight) {
-    header.classList.add('fixed');
-  } else {
-    header.classList.remove('fixed');
-  }
-}
+observer.observe(heroSection);
+observer.observe(footerSection);
