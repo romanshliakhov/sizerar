@@ -1,18 +1,9 @@
 .join {
   position: relative;
-  padding: clamp(78px, 6.146vw, 118px) 0 270px;
 
-  &::before {
-    content: '';
+  &__line {
     position: absolute;
-    top: 0;
-    left: 5%;
-    background-image: var(--join-line);
-    background-size: 100% 100%;
-    background-position: right;
-    background-repeat: no-repeat;
-    height: 898px;
-    width: 100%;
+    inset: 0;
 
     @media (max-width: 1240px) {
       height: 705px;
@@ -29,10 +20,108 @@
       height: 449px;
       background-size: initial;
     }
+
+    svg {
+      width: 108%;
+      fill: transparent;
+      object-fit: cover;
+    }
   }
 
-  @media (max-width: 576px) {
-    padding-bottom: 68px;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 5%;
+  //   background-image: var(--join-line);
+  //   background-size: 100% 100%;
+  //   background-position: right;
+  //   background-repeat: no-repeat;
+  //   height: 898px;
+  //   width: 100%;
+
+  //   @media (max-width: 1240px) {
+  //     height: 705px;
+  //     width: 985px;
+  //     background-position: left;
+  //     background-size: cover;
+  //   }
+
+  //   @media (max-width: 576px) {
+  //     left: 0;
+  //     top: 50px;
+  //     background-image: var(--join-line-mob);
+  //     width: 100%;
+  //     height: 449px;
+  //     background-size: initial;
+  //   }
+  // }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-image: var(--join-mix);
+    background-repeat: no-repeat;
+    width: 283px;
+    height: 445px;
+    animation-name: mix-join;
+    animation-duration: 16s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 423px;
+    height: 423px;
+    background-color: var(--color-yellow);
+    border-radius: 50%;
+    right: -8.2%;
+    bottom: 13%;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: clamp(78px, 6.146vw, 118px) 0 270px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 23%;
+      right: 8%;
+      background-image: var(--join-red);
+      background-repeat: no-repeat;
+      width: 38px;
+      height: 48px;
+      animation-name: red-join;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      right: 4%;
+      background-image: var(--join-blue);
+      background-repeat: no-repeat;
+      width: 82px;
+      height: 72px;
+      animation-name: blue-join;
+      animation-duration: 13s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+
+    @media (max-width: 576px) {
+      padding-bottom: 68px;
+    }
   }
 
   &__wrapp {
@@ -59,5 +148,37 @@
   &__descr {
     max-width: 750px;
     text-align: center;
+  }
+}
+
+
+
+@keyframes mix-join {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(200px);
+  }
+}
+
+@keyframes red-join {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(25px);
+  }
+}
+
+@keyframes blue-join {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(100px);
   }
 }

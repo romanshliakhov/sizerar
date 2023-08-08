@@ -25,6 +25,20 @@
       align-items: flex-start;
       overflow-x: auto;
       padding: 0 clamp(20px, 2.344vw, 45px);
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--color-scroll);
+        border-radius: 11px;
+      }
     }
   }
 
