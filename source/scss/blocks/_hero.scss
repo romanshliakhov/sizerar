@@ -57,7 +57,7 @@
       position: absolute;
       top: 3%;
       left: 24%;
-      background-image: var(--red);
+      background-image: var(--hero-red);
       background-repeat: no-repeat;
       width: 126px;
       height: 106px;
@@ -82,12 +82,12 @@
       position: absolute;
       top: 30%;
       left: 25%;
-      background-image: var(--green);
+      background-image: var(--hero-green);
       background-repeat: no-repeat;
       width: 65.905px;
       height: 40.533px;
       animation-name: green-image;
-      animation-duration: 8s;
+      animation-duration: 9s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
@@ -97,12 +97,12 @@
       position: absolute;
       top: 15%;
       left: 10%;
-      background-image: var(--yellow);
+      background-image: var(--hero-yellow);
       background-repeat: no-repeat;
       width: 98px;
       height: 93px;
       animation-name: yellow-image;
-      animation-duration: 5s;
+      animation-duration: 5.5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
@@ -119,7 +119,7 @@
         position: absolute;
         bottom: -57px;
         right: -65px;
-        background-image: var(--green);
+        background-image: var(--hero-green);
         background-repeat: no-repeat;
         width: 65.905px;
         height: 40.533px;
@@ -149,11 +149,11 @@
 
 @keyframes green-image {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   30% {
-    transform: translateY(20px);
+    transform: translateX(40px);
   }
 }
 
