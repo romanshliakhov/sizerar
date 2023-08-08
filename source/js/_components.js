@@ -18,6 +18,7 @@
 // import './components/filters.js';
 // import './components/filtersSearch.js';
 import './components/scrollHeader.js';
+import './components/heroLineAnimation.js';
 
 
 
