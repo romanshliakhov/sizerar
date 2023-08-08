@@ -47,10 +47,26 @@
     }
   }
 
-  &__bg {
+  &__right {
     position: relative;
     grid-column: 2;
     grid-row: 1 / span 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3%;
+      left: 24%;
+      background-image: var(--red);
+      background-repeat: no-repeat;
+      width: 126px;
+      height: 106px;
+      animation-name: red-image;
+      animation-duration: 8s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      z-index: 3;
+    }
 
     @media (max-width: 767px) {
       grid-column: 1;
@@ -58,7 +74,105 @@
     }
   }
 
+  &__bg {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: 25%;
+      background-image: var(--green);
+      background-repeat: no-repeat;
+      width: 65.905px;
+      height: 40.533px;
+      animation-name: green-image;
+      animation-duration: 8s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 10%;
+      background-image: var(--yellow);
+      background-repeat: no-repeat;
+      width: 98px;
+      height: 93px;
+      animation-name: yellow-image;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+
   &__btns {
     align-items: flex-start;
+
+    .green {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -57px;
+        right: -65px;
+        background-image: var(--green);
+        background-repeat: no-repeat;
+        width: 65.905px;
+        height: 40.533px;
+        z-index: -1;
+        animation-name: green;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes green {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes green-image {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes yellow-image {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes red-image {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(40px);
   }
 }
