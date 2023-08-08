@@ -121,15 +121,30 @@
       content: '';
       position: absolute;
       top: 15%;
-      right: 15%;
+      right: 12%;
       background-image: var(--about-red);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 55px;
-      height: 72px;
+      width: clamp(55px, 4.01vw, 77px);
+      height: clamp(41px, 3.75vw, 72px);
       animation-name: red-about;
       animation-duration: 7s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      @media (max-width: 991px) {
+        width: clamp(35px, 5.752vw, 57px);
+        height: clamp(41px, 7.265vw, 72px);
+        right: 29%;
+      }
+
+      @media (max-width: 769px) {
+        right: 22%;
+      }
+
+      @media (max-width: 576px) {
+        right: 15%;
+      }
     }
 
     &::after {
@@ -138,13 +153,28 @@
       top: 17%;
       right: -8%;
       background-image: var(--about-green);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 121px;
-      height: 107px;
+      height: clamp(71px, 5.573vw, 107px);
+      width: clamp(101px, 6.302vw, 121px);
       animation-name: green-about;
       animation-duration: 9s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      @media (max-width: 991px) {
+        width: clamp(101px, 12.21vw, 121px);
+        height: clamp(71px, 10.797vw, 107px);
+        right: 14%;
+      }
+
+      @media (max-width: 769px) {
+        right: 5%;
+      }
+
+      @media (max-width: 576px) {
+        right: -25%;
+      }
     }
   }
 }

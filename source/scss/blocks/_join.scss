@@ -63,25 +63,39 @@
     top: 10%;
     left: 0;
     background-image: var(--join-mix);
+    background-size: contain;
     background-repeat: no-repeat;
-    width: 283px;
-    height: 445px;
+    width: clamp(172px, 14.74vw, 283px);
+    height: clamp(155px, 23.177vw, 445px);
     animation-name: mix-join;
     animation-duration: 16s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+    @media (max-width: 991px) {
+      top: -5%;
+    }
   }
 
   &::before {
     content: '';
     position: absolute;
-    width: 423px;
-    height: 423px;
+    width: clamp(160px, 22.031vw, 423px);
+    height: clamp(160px, 22.031vw, 423px);
     background-color: var(--color-yellow);
     border-radius: 50%;
     right: -8.2%;
     bottom: 13%;
-    z-index: 1;
+
+    @media (max-width: 991px) {
+      right: -10%;
+    }
+
+    @media (max-width: 576px) {
+      bottom: initial;
+      top: 50%;
+      right: -30%;
+    }
   }
 
   &__wrapper {
@@ -94,13 +108,28 @@
       top: 23%;
       right: 8%;
       background-image: var(--join-red);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 38px;
-      height: 48px;
+      width: clamp(30px, 1.979vw, 38px);
+      height: clamp(40px, 2.5vw, 48px);
       animation-name: red-join;
       animation-duration: 4s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      @media (max-width: 1440px) {
+        top: 20%;
+        right: 10%;
+      }
+
+      @media (max-width: 991px) {
+        top: 5%;
+        right: 15%;
+      }
+
+      @media (max-width: 576px) {
+        display: none;
+      }
     }
 
     &::after {
@@ -109,13 +138,22 @@
       top: 25%;
       right: 4%;
       background-image: var(--join-blue);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 82px;
-      height: 72px;
+      width: clamp(60px, 4.271vw, 82px);
+      height: clamp(55px, 3.75vw, 72px);
       animation-name: blue-join;
       animation-duration: 13s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      @media (max-width: 991px) {
+        top: 5%;
+      }
+
+      @media (max-width: 576px) {
+        display: none;
+      }
     }
 
 
@@ -160,6 +198,18 @@
 
   30% {
     transform: translateY(200px);
+  }
+}
+
+@media (max-width: 991px) {
+  @keyframes mix-join {
+    0% {
+      transform: translateY(0);
+    }
+
+    30% {
+      transform: translateY(50px);
+    }
   }
 }
 

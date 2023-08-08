@@ -57,16 +57,27 @@
     &::before {
       content: '';
       position: absolute;
-      top: 32%;
+      top: 25%;
       left: -20%;
       background-image: var(--details-red);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 55px;
-      height: 72px;
+      width: clamp(38px, 3.819vw, 55px);
+      height: clamp(27px, 5vw, 72px);
       animation-name: red-details;
       animation-duration: 13s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      @media (max-width: 991px) {
+        top: 30%;
+        left: 10%;
+      }
+
+      @media (max-width: 576px) {
+        left: 5%;
+        top: 33%;
+      }
     }
 
     &::after {
@@ -75,13 +86,23 @@
       top: 30%;
       left: 0;
       background-image: var(--details-blue);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 121px;
-      height: 107px;
+      width: clamp(70px, 8.403vw, 121px);
+      height: clamp(51px, 7.431vw, 107px);
+
       animation-name: blue-details;
-      animation-duration: 8s;
+      animation-duration: 10s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
+
+      @media (max-width: 991px) {
+        left: 15%;
+      }
+
+      @media (max-width: 576px) {
+        top: 35%;
+      }
     }
 
     @media (max-width: 1240px) {
@@ -113,11 +134,14 @@
       top: -7%;
       left: -3%;
       background-image: var(--details-green);
+      background-size: contain;
       background-repeat: no-repeat;
-      width: 135px;
-      height: 119px;
+      // width: 135px;
+      // height: 119px;
+      width: clamp(100px, 7.031vw, 135px);
+      height: clamp(80px, 6.198vw, 119px);
       animation-name: green-details;
-      animation-duration: 8s;
+      animation-duration: 7s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
       z-index: -1;
@@ -150,7 +174,19 @@
   }
 
   40% {
-    transform: translateY(200px);
+    transform: translateY(150px);
+  }
+}
+
+@media (max-width: 991px) {
+  @keyframes red-details {
+    0% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(80px);
+    }
   }
 }
 
