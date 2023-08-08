@@ -126,7 +126,7 @@
       background-repeat: no-repeat;
       width: 55px;
       height: 72px;
-      animation-name: red-image;
+      animation-name: red-about;
       animation-duration: 7s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
@@ -141,7 +141,7 @@
       background-repeat: no-repeat;
       width: 121px;
       height: 107px;
-      animation-name: green-image;
+      animation-name: green-about;
       animation-duration: 9s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
@@ -150,7 +150,7 @@
 }
 
 
-@keyframes green-image {
+@keyframes green-about {
   0% {
     transform: translateY(0);
   }
@@ -160,7 +160,7 @@
   }
 }
 
-@keyframes red-image {
+@keyframes red-about {
   0% {
     transform: translateY(0);
   }
