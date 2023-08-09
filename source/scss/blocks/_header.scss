@@ -3,7 +3,7 @@
   width: 100%;
   padding: clamp(10px, 1.389vw, 20px) 0;
   background-color: transparent;
-  z-index: 5;
+  z-index: 10;
   transition: all 0.4s ease;
 
   &.fixed {
