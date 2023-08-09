@@ -115,9 +115,6 @@
 
   &__right {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &::after {
       content: '';
@@ -126,19 +123,114 @@
       left: 0;
       width: 196px;
       height: 196px;
+      width: clamp(140px, 15.806vw, 196px);
+      height: clamp(140px, 15.806vw, 196px);
       border-radius: 50%;
       background-color: var(--color-purple-light);
+
+      @media (max-width: 991px) {
+        left: 22%;
+        transform: translateX(-22%);
+        width: clamp(140px, 25.521vw, 196px);
+        height: clamp(140px, 25.521vw, 196px);
+      }
+
+      @media (max-width: 576px) {
+        left: -10%;
+        transform: translateX(-10%);
+      }
     }
 
     &::before {
       content: '';
       position: absolute;
-      bottom: 10px;
+      bottom: 0;
       left: 5%;
-      width: 542px;
-      height: 542px;
+      width: clamp(388px, 43.71vw, 542px);
+      height: clamp(388px, 43.71vw, 542px);
       border-radius: 50%;
       background-color: var(--color-yellow);
+
+      @media (max-width: 991px) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: clamp(388px, 70.573vw, 542px);
+        height: clamp(388px, 70.573vw, 542px);
+      }
+    }
+  }
+
+  &__right-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: 12%;
+      background-image: var(--about-red);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: clamp(55px, 4.01vw, 77px);
+      height: clamp(41px, 3.75vw, 72px);
+      width: 55px;
+      height: 72px;
+      animation-name: red-about;
+      animation-duration: 7s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      z-index: 10;
+
+      @media (max-width: 991px) {
+        width: clamp(35px, 5.752vw, 57px);
+        height: clamp(41px, 7.265vw, 72px);
+        right: 29%;
+        transform: translateX(-29%);
+      }
+
+      @media (max-width: 769px) {
+        right: 22%;
+        transform: translateX(-22%);
+      }
+
+      @media (max-width: 576px) {
+        right: 5%;
+        transform: translateX(-5%);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 17%;
+      right: -10%;
+      background-image: var(--about-green);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: clamp(71px, 5.573vw, 107px);
+      width: clamp(101px, 6.302vw, 121px);
+      animation-name: green-about;
+      animation-duration: 9s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      @media (max-width: 991px) {
+        width: clamp(101px, 12.21vw, 121px);
+        height: clamp(71px, 10.797vw, 107px);
+        right: 14%;
+      }
+
+      @media (max-width: 769px) {
+        right: 5%;
+      }
+
+      @media (max-width: 576px) {
+        right: -40%;
+      }
     }
   }
 
@@ -147,6 +239,8 @@
     position: relative;
     width: 344px;
     height: 688px;
+    width: clamp(232px, 44.733vw, 344px);
+    height: clamp(484px, 89.467vw, 688px);
     background-color: #4D4D4D;
     filter: drop-shadow(6px 6px 25px rgba(15, 11, 62, 0.20));
     border-radius: 62px;
@@ -168,39 +262,12 @@
     }
   }
 
-  &__phone-wrapp {
-    position: relative;
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 110px;
-    //   left: -126px;
-    //   width: 196px;
-    //   height: 196px;
-    //   border-radius: 50%;
-    //   background-color: var(--color-purple-light);
-    //   // z-index: -1;
-    // }
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 110px;
-    //   left: -126px;
-    //   width: 542px;
-    //   height: 542px;
-    //   border-radius: 50%;
-    //   background-color: var(--color-yellow);
-    //   // z-index: -1;
-    // }
-  }
 
   &__phone-video {
-    // position: absolute;
     box-sizing: content-box;
     // width: 344px;
     height: 688px;
+    height: clamp(484px, 89.467vw, 688px);
     border-radius: 48px;
 
     video {
@@ -208,8 +275,6 @@
       width: 100%;
       border-radius: 62px;
     }
-
-
   }
 
   &__bg {
@@ -278,16 +343,6 @@
       }
     }
   }
-
-  // &__video {
-  //   width: 332px;
-  //   height: 676px;
-
-  //   video {
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  // }
 }
 
 
