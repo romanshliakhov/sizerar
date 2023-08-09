@@ -27,14 +27,16 @@ for (const newsSlider of document.querySelectorAll('.mySwiper')) {
       const enableSwiper = function () {
         slider = new Swiper(newsSlider, {
           slidesPerView: 1,
+          direction: "vertical",
           observer: true,
           observeParents: true,
           loop: true,
           effect: "fade",
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-          },
+          slideToClickedSlide: true,
+          // autoplay: {
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          // },
           pagination: {
             el: ".info__swiper-pagination",
             clickable: true,
