@@ -1,7 +1,7 @@
 .info {
   position: relative;
   background-color: var(--color-bg);
-  padding: 148px 0 59px;
+  padding: clamp(70px, 7.708vw, 148px) 0 70px;
 
   &__wrapp {
     position: relative;
@@ -13,10 +13,21 @@
 
     .swiper-slide {
       opacity: 0 !important;
+
+      @media (max-width: 576px) {
+        opacity: 1 !important;
+      }
     }
 
     .swiper-slide-active {
       opacity: 1 !important;
+    }
+  }
+
+  &__swiper-wrapper {
+    @media (max-width: 576px) {
+      flex-direction: column;
+      grid-gap: 55px;
     }
   }
 
@@ -41,6 +52,10 @@
 
     .swiper-pagination-bullet-active {
       background-color: var(--color-main);
+    }
+
+    @media (max-width: 576px) {
+      display: none;
     }
   }
 }
